@@ -1,0 +1,24 @@
+{
+  "name": "imdb_scrap",
+  "version": "1.0.0",
+  "description": "scrap data from web URL of IMDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3swayam/imdb_scrap.git"
+  },
+  "author": "Swayam P Rout",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3swayam/imdb_scrap/issues"
+  },
+  "homepage": "https://github.com/3swayam/imdb_scrap#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "fs": "0.0.1-security",
+    "request": "^2.88.2"
+  }
+}
