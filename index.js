@@ -2,7 +2,7 @@ const request = require('request');
 const cheerio = require('cheerio');
 const fs = require('fs');
 let arr = [];
-const URL = 'https://www.imdb.com/search/title/?count=10&groups=top_1000&sort=user_rating';
+const URL = 'https://www.imdb.com/search/title/?count=100&groups=top_1000&sort=user_rating';
 request(URL, (error, response, html) => {
     if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
@@ -10,7 +10,7 @@ request(URL, (error, response, html) => {
         $('.lister-item').each((i, el) => {
             let ob = {};
             // DONE Image
-            ob.image = $('.lister-item-image').find('img').attr('loadlate');
+            ob.image = $(el).find('.lister-item-image').find('img').attr('loadlate');
             // DONE Header
             const header = $(el).find('.lister-item-header');
             ob.movieName = header.find('a').text();
